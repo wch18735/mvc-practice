@@ -1,2 +1,4 @@
-package org.example;public class WebApplicationServerTest {
+package org.example;
+
+public class WebApplicationServerTest {
 }

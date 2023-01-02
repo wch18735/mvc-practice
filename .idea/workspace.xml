@@ -4,28 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e65ac1ad-1667-4dc0-a148-96978e481f8c" name="Changes" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_2_1_214.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jdbc_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_tx_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/connector/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/connector/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/connector/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UserDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/db_schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+    <list default="true" id="e65ac1ad-1667-4dc0-a148-96978e481f8c" name="Changes" comment="connection example">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_28_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reflections_reflections_0_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/annotation/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/annotation/RequestMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/annotation/RequestMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/HealthCheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/mvc-practice.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mvc-practice.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/mvc-practice.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mvc-practice.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc-practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mvc-practice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/connector/CalculatorServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +56,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
+        <option value="AnnotationType" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -102,6 +99,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.annotation" />
       <recent name="org.example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -111,43 +109,54 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest">
-    <configuration name="WebApplicationServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.WebApplicationServer" />
-      <module name="mvc-practice.main" />
+  <component name="RunManager" selected="JUnit.ReflectionTest.controllerScan">
+    <configuration name="ReflectionTest.controllerScan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvc-practice.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.connector.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ReflectionTest" />
+      <option name="METHOD_NAME" value="controllerScan" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests in 'mvc-practice'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="ReflectionTest.loadClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvc-practice.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ReflectionTest" />
+      <option name="METHOD_NAME" value="loadClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="TEST | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/TEST.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
+    <configuration name="ReflectionTest.showClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvc-practice.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ReflectionTest" />
+      <option name="METHOD_NAME" value="showClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvc-practice.test" />
@@ -181,19 +190,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WebApplicationServer" />
-      <item itemvalue="Gradle.Tests in 'mvc-practice'" />
-      <item itemvalue="HTTP Request.TEST | #1" />
+      <item itemvalue="JUnit.ReflectionTest.controllerScan" />
+      <item itemvalue="JUnit.ReflectionTest.loadClass" />
+      <item itemvalue="JUnit.ReflectionTest.showClass" />
       <item itemvalue="JUnit.UserDaoTest" />
       <item itemvalue="JUnit.UserDaoTest.createTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReflectionTest.controllerScan" />
+        <item itemvalue="JUnit.ReflectionTest.showClass" />
+        <item itemvalue="JUnit.ReflectionTest.loadClass" />
         <item itemvalue="JUnit.UserDaoTest" />
         <item itemvalue="JUnit.UserDaoTest.createTest" />
-        <item itemvalue="HTTP Request.TEST | #1" />
-        <item itemvalue="Application.WebApplicationServer" />
-        <item itemvalue="Gradle.Tests in 'mvc-practice'" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +222,8 @@
       <workItem from="1672153127877" duration="3725000" />
       <workItem from="1672241118185" duration="12000" />
       <workItem from="1672497191647" duration="573000" />
-      <workItem from="1672580571652" duration="1294000" />
+      <workItem from="1672580571652" duration="6419000" />
+      <workItem from="1672659526910" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="README.md">
       <created>1671824290825</created>
@@ -222,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671824290825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="connection example">
+      <created>1672583587059</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672583587059</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="connection example" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection example" />
   </component>
 </project>

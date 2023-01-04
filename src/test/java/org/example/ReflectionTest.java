@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.annotation.Controller;
+import org.example.annotation.ControllerAnnotation;
 import org.example.connector.User;
 import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
@@ -25,7 +25,7 @@ public class ReflectionTest {
         Reflections reflections = new Reflections("org.example");
 
         Set<Class<?>> beans = new HashSet<>();
-        beans.addAll(reflections.getTypesAnnotatedWith(Controller.class));
+        beans.addAll(reflections.getTypesAnnotatedWith(ControllerAnnotation.class));
 
         logger.debug("beans: [{}]", beans);
     }

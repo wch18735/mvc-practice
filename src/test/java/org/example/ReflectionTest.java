@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.annotation.ControllerAnnotation;
-import org.example.connector.User;
+import org.example.connector.TempUser;
 import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ public class ReflectionTest {
 
     @Test
     void showClass() {
-        Class<User> clazz = User.class;
+        Class<TempUser> clazz = TempUser.class;
         logger.debug(clazz.getName());
         logger.debug("User all declared fields: [{}]", Arrays.stream(clazz.getDeclaredFields()).collect(Collectors.toList()));
         logger.debug("User all declared constructors: [{}]", Arrays.stream(clazz.getDeclaredConstructors()).collect(Collectors.toList()));
@@ -42,14 +42,14 @@ public class ReflectionTest {
     @Test
     void loadClass() throws ClassNotFoundException {
         // Load type 1
-        Class<User> classByDotClass = User.class;
+        Class<TempUser> classByDotClass = TempUser.class;
 
         // Load type 2
-        User user = new User("wch18735", "password", "name", "email");
-        Class<? extends User> classByGetClass = user.getClass();
+        TempUser tempUser = new TempUser("wch18735", "password", "name", "email");
+        Class<? extends TempUser> classByGetClass = tempUser.getClass();
 
         // Load type 3
-        Class<?> classByForName = Class.forName("org.example.connector.User");
+        Class<?> classByForName = Class.forName("org.example.connector.TempUser");
 
         assertThat(classByDotClass == classByGetClass).isTrue();
         assertThat(classByGetClass == classByForName).isTrue();

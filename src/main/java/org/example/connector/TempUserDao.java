@@ -2,9 +2,9 @@ package org.example.connector;
 
 import java.sql.*;
 
-public class UserDao {
+public class TempUserDao {
 
-    public void create(User user) throws SQLException {
+    public void create(TempUser tempUser) throws SQLException {
         Connection con = null;
         PreparedStatement pstmt = null;
 
@@ -12,10 +12,10 @@ public class UserDao {
             con = ConnectionManager.getConnection();
             String sql = "INSERT INTO USERS VALUES (?, ?, ?, ?)";
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, user.getUserId());
-            pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getName());
-            pstmt.setString(4, user.getEmail());
+            pstmt.setString(1, tempUser.getUserId());
+            pstmt.setString(2, tempUser.getPassword());
+            pstmt.setString(3, tempUser.getName());
+            pstmt.setString(4, tempUser.getEmail());
             pstmt.executeUpdate();
         } finally {
             if(pstmt != null) {
@@ -28,7 +28,7 @@ public class UserDao {
         }
     }
 
-    public User findByUserId(String userId) throws SQLException {
+    public TempUser findByUserId(String userId) throws SQLException {
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -40,10 +40,10 @@ public class UserDao {
             pstmt.setString(1, userId);
 
             rs = pstmt.executeQuery();
-            User user = null;
+            TempUser tempUser = null;
 
             if(rs.next()){
-                user = new User(
+                tempUser = new TempUser(
                         rs.getString("userId"),
                         rs.getString("password"),
                         rs.getString("name"),
@@ -51,7 +51,7 @@ public class UserDao {
                 );
             }
 
-            return user;
+            return tempUser;
         } finally {
             if(rs != null){
                 rs.close();

@@ -1,8 +1,8 @@
 package org.example;
 
 import org.example.connector.ConnectionManager;
-import org.example.connector.User;
-import org.example.connector.UserDao;
+import org.example.connector.TempUser;
+import org.example.connector.TempUserDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UserDaoTest {
+public class TempTempUserDaoTest {
     @BeforeEach
     void setUp() {
         ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
@@ -23,12 +23,12 @@ public class UserDaoTest {
 
     @Test
     void createTest() throws SQLException {
-        UserDao userDao = new UserDao();
+        TempUserDao tempUserDao = new TempUserDao();
 
-        userDao.create(new User("wch18735", "password", "name", "email"));
+        tempUserDao.create(new TempUser("wch18735", "password", "name", "email"));
 
-        User user = userDao.findByUserId("wch18735");
+        TempUser tempUser = tempUserDao.findByUserId("wch18735");
 
-        assertThat(user).isEqualTo(new User("wch18735", "password", "name", "email"));
+        assertThat(tempUser).isEqualTo(new TempUser("wch18735", "password", "name", "email"));
     }
 }

@@ -20,11 +20,11 @@
     </thead>
 
     <tbody>
-    <c:forEach items="${users}" var="user" varStatus="status">
+    <c:forEach items="${users}" var="tempUser" varStatus="status">
         <tr>
             <th scope="row">${status.count}</th>
-            <td>${user.userId}</td>
-            <td>${user.name}</td>
+            <td>${tempUser.userId}</td>
+            <td>${tempUser.name}</td>
         </tr>
     </c:forEach>
     </tbody>
